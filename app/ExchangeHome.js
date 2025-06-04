@@ -1,15 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import UserModal from './components/UserModal';
-import { users } from './data/users';
-
-type User = {
-  name: string;
-  wishlist: string[];
-};
+import UserModal from '../components/UserModal';
+import { users } from '../lib/data';
 
 export default function Home() {
-  const [selectedUser, setSelectedUser] = useState<User | null>(null);
+  const [selectedUser, setSelectedUser] = useState(null);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 p-6">
